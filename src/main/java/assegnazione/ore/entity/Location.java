@@ -6,7 +6,7 @@ public enum Location {
     SEDE_CLIENTE,
     SEDE
 
-    // TODO: Vedere un parametro di default nel caso di vacanze
+
 
 
 }

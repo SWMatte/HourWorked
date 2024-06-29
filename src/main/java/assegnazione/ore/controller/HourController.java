@@ -61,6 +61,11 @@ public class HourController extends BaseService {
     }
 
 
+    /**
+     *
+     * @param dayWorkedDTO  this parameter included some values of the hours worked from the user
+     * @return
+     */
     @PostMapping("sendHourWorked")
     public ResponseEntity<?> sendHourWorked(@RequestBody DayWorkedDTO dayWorkedDTO) {
         log.info("Enter into: " + getCurrentClassName() + " start method: " + getCurrentMethodName());
@@ -79,7 +84,12 @@ public class HourController extends BaseService {
 
     }
 
-
+    /**
+     *
+     * @param lastName  value of the user you want retrieve from the database
+     * @param month month you want check on the database
+     * @return the {@link OperationDTO}
+     */
     @PostMapping("operationHourAndDay")
     public OperationDTO countDayAndHour(@RequestParam String lastName, @RequestParam String month) {
         log.info("Enter into: " + getCurrentClassName() + " start method: " + getCurrentMethodName());

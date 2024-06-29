@@ -21,6 +21,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 @Data
@@ -79,10 +81,10 @@ public class WorkDayService extends BaseService implements Element<DayWorkedDTO>
     @Override
     public OperationDTO countDayAndHour(String lastName, String month) {
         if (Utility.isNotNullOrEmpty(lastName) && Utility.isNotNullOrEmpty(month)) {
-            //OperationDTO operationDTO =  hourWorkedRepository.countDayAndHour(lastName,month);
-            return null;
-            //return operationDTO;
-        } else {
+             OperationDTO  operationDTO =  hourWorkedRepository.getInformation(lastName,month);
+
+            return operationDTO;
+         } else {
             throw new RuntimeException(String.format("Some value of '%s' or '%s' are empty", lastName, month));
         }
 

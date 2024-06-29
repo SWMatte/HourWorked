@@ -4,19 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @Builder
+@NoArgsConstructor
 public class OperationDTO {
-
-
-    private Long totalDayForMonth;
-    private Long numberDayWorked;
-    private Double sumHourWorked; //TODO: queste ore sono quelle effettivamente lavorate senza la malattia / permesso
-    private Double totalHourForMonth;  // TODO: queste ore sono le totali in un mese
-    private Long illnessDay;
-    private Long dayOff;
-
+    private String lastName;
+    private double numberDayWorked;
+    private double totalDayForMonth;
+    private double totalHourForMonth;
+    private double illnessDay;
+    private double dayOff;
+    private double sumHourWorked;
 
 }
