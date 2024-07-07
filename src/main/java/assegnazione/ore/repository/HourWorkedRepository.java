@@ -36,14 +36,16 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
             """)
     OperationDTO getInformation(@Param("lastName") String lastName, @Param("month") String month);
 
+
+
     @Query("""
-    SELECT NEW assegnazione.ore.entity.dto.TableDTO(hw.day,
-                                                     hw.number,
-                                                     hw.hour,
-                                                     hw.place,
-                                                     :month)
-    FROM HourWorked hw
-""")
+                SELECT NEW assegnazione.ore.entity.dto.TableDTO(hw.day,
+                                                                 hw.number,
+                                                                 hw.hour,
+                                                                 hw.place,
+                                                                 :month)
+                FROM HourWorked hw
+            """)
     List<TableDTO> getTableValue(@Param("month") String month);
 
 
@@ -53,14 +55,14 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
              FROM HourWorked hw
                 where hw.month = :month
             """)
-    double getTotalHourWorked(String month);
+    Double getTotalHourWorked(String month);
 
 
     @Query("""
                 select sum(hw.illness) as giorni_malattia
              FROM HourWorked hw
             """)
-    double getIllnessDay();
+    Double getIllnessDay();
 
 
     @Query("""
@@ -68,20 +70,20 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
              FROM HourWorked hw
                    where month =:month
             """)
-    double getTotalHoursForMonth(String month);
+    Double getTotalHoursForMonth(String month);
 
     @Query("""
                    select count(*) as giorni_lavorati
              FROM HourWorked hw
                       where hw.hour <> 0
             """)
-    double getWorkedDay();
+    Double getWorkedDay();
 
     @Query("""
              select count(*) as giorni_totali_mese
              FROM HourWorked hw
             """)
-    int getTotalDayForMonth();
+    Integer getTotalDayForMonth();
 
 
 }

@@ -5,9 +5,11 @@ import assegnazione.ore.entity.DayMonth;
 import assegnazione.ore.entity.dto.DayWorkedDTO;
 import assegnazione.ore.entity.dto.OperationDTO;
 import assegnazione.ore.service.Element;
+import assegnazione.ore.service.ExcelService;
 import assegnazione.ore.service.iHourWorked;
 import jakarta.persistence.EntityNotFoundException;
 
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +17,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.format.TextStyle;
 
 import java.time.LocalDate;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -34,6 +40,10 @@ public class HourController extends BaseService {
 
     @Autowired
     private final iHourWorked iHourWorked;
+
+
+    @Autowired
+    private final ExcelService excelService;
 
     /**
      * @param month represent the specific month
@@ -97,4 +107,19 @@ public class HourController extends BaseService {
         return iHourWorked.countDayAndHour(lastName, month);
 
     }
+
+
+    @GetMapping("exportExcel")
+    public void exportToExcel(HttpServletResponse response,@RequestParam String month) throws IOException {
+        response.setContentType("application/octet-stream");
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        String currentDateTime = dateFormatter.format(new Date());
+
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=users_" + currentDateTime + ".xlsx";
+        response.setHeader(headerKey, headerValue);
+
+        ExcelService excelService1 = new ExcelService(excelService.getValues(month));
+        excelService1.export(response);
+     }
 }
