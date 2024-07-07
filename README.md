@@ -39,3 +39,7 @@ This project is licensed under the MIT License. For more details, see the includ
 ## Contact
 
 If you have questions, suggestions, or feedback, feel free to contact me via [email](mailto:peirettimatteo1@gmail.com) or through other preferred contact methods.
+
+
+example of excel file ![image](https://github.com/SWMatte/HourWorked/assets/118458998/28b9779a-82ba-47ca-924d-bccfaf3a6c27)
+
