@@ -6,5 +6,9 @@ public interface Element<T>{
 
     ResponseEntity<?> addElement(T element) throws Exception;
 
+    ResponseEntity<?> getInformations(int id) throws Exception;
+
+
+
 
 }

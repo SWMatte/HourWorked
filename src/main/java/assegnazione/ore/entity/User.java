@@ -17,6 +17,9 @@ public class User {
     private int idUser;
     private String name;
     private String lastName;
+    @ManyToOne
+    @JoinColumn(name = "id_company")
+    private Company company;
 
 
 

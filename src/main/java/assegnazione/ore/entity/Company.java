@@ -14,7 +14,6 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_company")
     private int idCompany;
-
     private String nameCompany;
     private String placeCompany;
 

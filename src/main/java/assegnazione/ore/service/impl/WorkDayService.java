@@ -77,6 +77,14 @@ public class WorkDayService extends BaseService implements Element<DayWorkedDTO>
         }
     }
 
+    @Override
+    public ResponseEntity<?> getInformations(int id) throws Exception {
+        return null;
+        /*
+         * da rimuovere
+         */
+    }
+
 
     @Override
     public OperationDTO countDayAndHour(String lastName, String month) {

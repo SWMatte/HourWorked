@@ -1,0 +1,442 @@
+{
+	"info": {
+		"_postman_id": "5623bbc8-7e89-42fc-984f-d08440eb571a",
+		"name": "ore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29583492"
+	},
+	"item": [
+		{
+			"name": "get Calendar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/getMonth?month=7&year=2024",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"getMonth"
+					],
+					"query": [
+						{
+							"key": "month",
+							"value": "7"
+						},
+						{
+							"key": "year",
+							"value": "2024"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendHourWorked",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"idUser\": 1\r\n    },\r\n    \"company\": {\r\n        \"idCompany\": 1\r\n    },\r\n    \"hourWorkedDTO\": [\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"sabato\",\r\n            \"number\": \"01\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"domenica\",\r\n            \"number\": \"02\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"lunedi\",\r\n            \"number\": \"03\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"martedi\",\r\n            \"number\": \"04\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"mercoledi\",\r\n            \"number\": \"05\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"giovedi\",\r\n            \"number\": \"06\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"venerdi\",\r\n            \"number\": \"07\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"sabato\",\r\n            \"number\": \"08\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"domenica\",\r\n            \"number\": \"09\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"lunedi\",\r\n            \"number\": \"10\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"martedi\",\r\n            \"number\": \"11\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"mercoledi\",\r\n            \"number\": \"12\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"giovedi\",\r\n            \"number\": \"13\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"venerdi\",\r\n            \"number\": \"14\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"sabato\",\r\n            \"number\": \"15\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"domenica\",\r\n            \"number\": \"16\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"lunedi\",\r\n            \"number\": \"17\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"martedi\",\r\n            \"number\": \"18\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"mercoledi\",\r\n            \"number\": \"19\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"giovedi\",\r\n            \"number\": \"20\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"venerdi\",\r\n            \"number\": \"21\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"sabato\",\r\n            \"number\": \"22\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"domenica\",\r\n            \"number\": \"23\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"lunedi\",\r\n            \"number\": \"24\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"martedi\",\r\n            \"number\": \"25\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"mercoledi\",\r\n            \"number\": \"26\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"giovedi\",\r\n            \"number\": \"27\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"venerdi\",\r\n            \"number\": \"28\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"sabato\",\r\n            \"number\": \"29\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"domenica\",\r\n            \"number\": \"30\",\r\n            \"year\": \"2024\",\r\n            \"hour\": 8,\r\n            \"note\": \"\",\r\n            \"place\": \"SEDE\",\r\n            \"illnes\": 0,\r\n            \"dayOff\": 0,\r\n            \"holiday\": 0\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/sendHourWorked",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"sendHourWorked"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "operation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"idUser\": 1\r\n    },\r\n    \"hourWorkedDTO\": [\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"venerdi\",\r\n            \"number\": \"2024-06-22\",\r\n            \"hour\":8,\r\n            \"year\":\"2024\",\r\n            \"note\": \"\"\r\n        },\r\n        {\r\n            \"month\": \"06\",\r\n            \"day\": \"giovedi\",\r\n            \"number\": \"2024-06-23\",\r\n            \"hour\": 4.5,\r\n            \"year\":\"2024\",\r\n            \"note\": \"visita medica\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/operationHourAndDay?lastName=pippo&month=06",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"operationHourAndDay"
+					],
+					"query": [
+						{
+							"key": "lastName",
+							"value": "pippo"
+						},
+						{
+							"key": "month",
+							"value": "06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameCompany\":\"Reply Cluster\",\r\n    \"placeCompany\":\"Milan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addCompany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"lastName\":\"Peiretti\",\r\n    \"name\":\"Matteo\",\r\n    \"company\":{\r\n        \"idCompany\":1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/getUser?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"getUser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/getCompany?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"getCompany"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pdf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Matteo\",\r\n    \"lastName\":\"Peiretti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "excel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Matteo\",\r\n    \"lastName\":\"Peiretti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"addUser"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user Copy 2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Matteo\",\r\n    \"lastName\":\"Peiretti\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/exportExcel?month=06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"exportExcel"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "06"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=hours_2024-07-07_11:18:55.xlsx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 09:18:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000[Content_Types].xml�S�n�0\u0010����*6�PU\u0015�C\u001f�\u0016��\u0003\\{�X�%����]\u00078�R�\nq�cfgfW�d�q�ZCB\u0013|��|�*�*h㻆},^�{Va�^K\u001b<4�\u00076�N\u0016�\bXQ�ǆ�9�\u0007!P��$�\u0010�\u0013҆�d�c�D�j);\u0010��ѝP�g��E�M'O�ʕ����H7L�h���R���G��^�'�\u0003\u0007{\u0013�\b�zސʮ\u001bB��3\u001c�\u000b˙��h.�h�W�жF�\u000ej娄CQՠ똈���}ιL�U:\u0012\u0014D�\u0013����%އ����,�B���[�\t��\u001e ;˱�\t�{N��~��X�p�\u001cykOL�\u0004\u0018�kN�V��ܿBZ~����q\u0018��\u000f �a\u0019\u001fr��{O�\u0001PK\u0007\bz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000_rels/.rels���j�0\f�_���8�`�Q��2�m��\u00014[ILb��ږ���.[K\n\u001b�($}�\u0007�v?�I�Q.���uӂ�h���\u001bx>=��@\u0015��p�H\u0006\"�~�}�\t�n����*\"\u0016\u0003�H�׺؁\u0002��\u0013���8\u0007�Z�^'�#��7m{��O\u0006�3��\u0019�G�\u0006u�ܓ\u0018�'��y|a\u001e�����D�\t��\u000el_\u0003EYȾ�\u0000���vql\u001f3�ML�eh\u0016���*�\u0004��\\3�Y0���oJ׏�\u0003\t:\u0014��^\b�\u001f�}\u0002PK\u0007\b��z��\u0000\u0000\u0000I\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xmlM��\n�0\u0010D��\u0010ro�z\u0010�4� �'{�\u000f\b��\u0006�MHV�盓z�\u0019��T��E�1e\u0017�����\u0002Ɇ�ѳ����:�No7jH!bb�Y�\u0007�V���\u0004�����T�)$o���0M��9ؗGb�7�\u0001pe�\u0011�*~�R�>��Y�EB��\u0014�\u0018nW\u0005������\u0000PK\u0007\b6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011\u0000\u0000\u0000docProps/core.xmlm��J�0\u0010F_%依���\u001a�.�,\b�\u000bV\u0014�B2���$���M�ZA�\\$�9L��\u001e�@������iF\tjad�ۊ>4�dC�\u000f\\K>\u0018�\u0015Նn�RX&�ý3\u0016]�ѓ�ў\t[�.\u0004�\u0000��Pq�FB���8�C|�\u0016,\u0017��E(��\u0014\u0014\u0006.y�0\t\u0013�\u0018�Q)Ţ�on�\u0005R\u0000\u000e�P\u0007\u000fy��\u000f\u001b�)�oÜ,���\u000b5�c:�f.N������<|����\u0002i]\u001e�L8�\u0001%�\u0002\u0016>l��w򸺼jv�.��$���i�s�o�z�\\¯�I�u7���\u000b���'n)��g��'PK\u0007\b2�;+\u0006\u0001\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000xl/sharedStrings.xmlm��N�0\u0010\u0006�H�C�;�O�Ң$=�rDH�\u0003�ɶ�\u0014��v\"x{�z\"��;\u001e�4+�8|�.\u001b)D�]��J��\\�\u001b�%��xyرCuWĘ��\u000f.�l�a����@�7��Y6�q�dmJ�\u0013�n���=�����i\u001aÕ�>�nbK�lǕ\u0010[n�q�*���T\u001d�O�SU��^\u0007{�0��\u001f\u0016��5-`�f�s\u001a�Y'?�Br������4g���L�X+\u0014X�\r�\u001a�Ps�Z\u001d\u0012r�ȥP�\u000e�\u001b`_�\u001f��\u0005�H�\u0002p\u001f�+v\b�\u0001�\u0002Atq��(ѽ$:�D�\u0012�JT$Q�DE\n\u0015)T�P�BE\n\u0015)T�P�BE\n\u0015)T��/�ӿ�~\u0001PK\u0007\b���\u001e'\u0001\u0000\u0000%\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\r\u0000\u0000\u0000xl/styles.xml��Qk�0\u0010��\u0007�\u000e!�֎R�ڇ�c��`���\u001a��B���O��h��JY_������h�>J�\u000e�X\u000e���Y�\u0011S5P��\u0002l��\u0015^��\u000f�u�`��1��C�\u0002w��$�u�$�3�L�7\r\u0018I�OM�Xm\u0018�6��H�4]&�p��\\�e%�E5�+p��2o@��\u0005�B��ot \u0016f�e5\b0�+ʎ�\u0016x\u00154E$�U�D��\u0003�H.�(gA\u0018&\u001d�$W`���.��'�4�2\u000e���3{�O�s\u0004����Ʌ8��(��&�1�*��1���\u0015X�\u001a\u001b\u000fu7�)1_o��\u0017����w`�����\u001cOR�\u000b�8o0����@���9�>�����\b��1\u0006\u001e[3!6�k�l~��\r���NÍ���\u0014���0bb\u0012���Ⱦ�.�¢cs�_s�o�\u0011�Z�\u0015�A���\u001a.�\u000f��������?PK\u0007\b*9h�w\u0001\u0000\u0000�\u0003\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000xl/workbook.xml��1O�0\u0010�w$��u;�C\u0011�(N�\n�\u001bCa�ڗ�jlG>����\n02��޻�|�A\\(��AC�R (�h]8j�ؿ=�����k�1�\u000e1�D�\u0007���<�R���#��H�8]L\u001es��(yL��{��\u0007��Գ��\u0002�\bu�\u000f#v�3����)�\u001b$р���ލ\f�O��$,f�^Փ�\u000e\u0007&�m39����\u001b��@�݅�xР���\u0013�;/S\u0004�T^��G R�����k\u0010��+��\u0001˖\\��PK\u0007\b�\u001c] �\u0000\u0000\u0000]\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\u0000\u0000\u0000xl/_rels/workbook.xml.rels��Mk�0\f@���}q��\u0018�n/c����\u0000c+qh\"\u0019K�迟���@\u0007;�$��{\u000f��~Γy�\"#���i� \u0005�#\r\u000e^�O7�`D=E?1�\u0003b�n��8y�?$�YLE�8H���Z\t\tg/\rg����^�\f6�p�\u0003�U���r΀%�좃��\u001d��/\u0003�\u0003I�`|�Rˤ��:f����~\f���mF�\u000bv����\u001c�:���ׯ�������p9HB�Sy\u001dݵK~\u0004�\u0018����\u000bPK\u0007\b�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000[Z�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0000\u0000\u0000xl/worksheets/sheet1.xml��Ko�0\u0010��\u0005�\u001f\u0004�k�K�\\�.��A{(P�yVl�\u0016jI������d�tv�\b�K\"���X��B.���\u000f�����m����a��u����2����M\u0011�[�~�8���~��\u000e�\u0001M�\f�Z\u001f�FQ�ޫ��g�Q5�'۶�K=�v��?v��L��C\u0004q�EuY5�j��jՌ3\u0006��.����\u0007\ta�ZL⟕:�W��8�C��\u001eO>m��Q�\u000f��A��\u001a�u����\u0011\u0019~?���\u0005\u001b�-\u001f\u000f�k{����^\u000f_5\u001d��0h�\u001e��gPW�\u0015\b���3�>U\u001b�\u001f�`��\u0002\n\u0001i\u0018�\u001f{�ֿΟL�\u0006\u000f�����1�\u0017\\���+�yV��j%/V�X��ʔ\\�\u0012cT��4��H��)5N��<���7St��Ӎ�+u�Zt�)��k?L3\u001e�\u001f��0�\u000f���קU���ơ\u0017�\rU��[���;���\u0015\u001f�\"1�hHm���\u000eWC`\u001a���T���gEs��g�\u0002�Q���&M4I�\u0014(\u001aU�Q4�\u0011��8�%&ZB�\b|�\u0019\t��\t\tW�p��\u0011.5�R:3z�n\u0018\tz�nS�p��\u0011.3�2:s��1\u0012�L�f\u001eᨍ#\\n��tf���0�\u001c��=�Q\u001bG�+���}`$��(<�Q\u001bG��\t7�F�\u0002м�s����8����s�b�0\u0012 \r\u001d{�c�\\\u0001��!^�\u0013F\u0003�\u0013\n���\u0018�\u0012ZL\b�ߤT\u0018\r�V\u0011�\u0015LBoX\bK\u000bAk�4\u000b��\u0004'��`\u0012z3CXh\b\u0006\t�^\u0018\r��\u0013>�`�\\\t-9\u0004�\u0005�P\r�\b�\u000f<\u0018#WB�\u000fA[\u001d\u0017\r#\u0001\\т\u0002�y��\t\",B\u0004mvr\u0005�\u0004\n\u001c�B�\t�M\u0011a1\"\u0018H���\u001a� \u0011>$a�\\\t-K\u0004�x�5T#1N\u0004�\t��\u001b(`�\u0002��I�0\u001a��\u0002�(4!c�Jh�\u0002\fQp�0\u001a��\u0002>Da�\\\t�\u0016\u001e\fQ��h$&\n�\u0010�1r%�D\u0001Z�dmD%\u0012\u0003\u0005|� ��+�\u0005\nЎ'W�J$�\tP�0\u0001�y\u0002�'��\u0004w\r��d���\u0013�ȕ��\u0004��\u0006�\u001aF#1P�gE�\u0018�\u0012Z�\u0000�� ]C5\u0012\u0013\u0005|�%��+�%\n0D!]C5\u0012\u0013\u0005|��\u0018�\u0012Z�\u0000C\u0014�PM��\u0002>Da�\\[\u001d�(��<�\u001aF�`�H�%\nc�\nh�\"iǓ�\u0018*I0O$�\t\u0013Л'��dܙ��\"��>\u000f�����N}.�]���C�u[/�x6�0n�V�n<\u001bzy�ʍ99���TaНwh�c�\u001e/c�\u001dC�\u000b��\u000bPK\u0007\be�G�\u0001\u0004\u0000\u0000�\u0016\u0000\u0000PK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�Xz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X��z��\u0000\u0000\u0000I\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000|\u0001\u0000\u0000_rels/.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0002\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X2�;+\u0006\u0001\u0000\u0000�\u0001\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000i\u0003\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X���\u001e'\u0001\u0000\u0000%\u0004\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0004\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X*9h�w\u0001\u0000\u0000�\u0003\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0017\u0006\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X�\u001c] �\u0000\u0000\u0000]\u0001\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0007\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�X�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\b\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000[Z�Xe�G�\u0001\u0004\u0000\u0000�\u0016\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\t\u0000\u0000xl/worksheets/sheet1.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\t\u0000\t\u0000?\u0002\u0000\u0000D\u000e\u0000\u0000\u0000\u0000"
+				},
+				{
+					"name": "excel",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Matteo\",\r\n    \"lastName\":\"Peiretti\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/exportExcel?month=06",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"exportExcel"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "06"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "raw",
+					"header": [
+						{
+							"key": "Content-Disposition",
+							"value": "attachment; filename=users_2024-07-07_12:41:27.xlsx"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/octet-stream"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 07 Jul 2024 10:41:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0013\u0000\u0000\u0000[Content_Types].xml�S�n�0\u0010����*6�PU\u0015�C\u001f�\u0016��\u0003\\{�X�%����]\u00078�R�\nq�cfgfW�d�q�ZCB\u0013|��|�*�*h㻆},^�{Va�^K\u001b<4�\u00076�N\u0016�\bXQ�ǆ�9�\u0007!P��$�\u0010�\u0013҆�d�c�D�j);\u0010��ѝP�g��E�M'O�ʕ����H7L�h���R���G��^�'�\u0003\u0007{\u0013�\b�zސʮ\u001bB��3\u001c�\u000b˙��h.�h�W�жF�\u000ej娄CQՠ똈���}ιL�U:\u0012\u0014D�\u0013����%އ����,�B���[�\t��\u001e ;˱�\t�{N��~��X�p�\u001cykOL�\u0004\u0018�kN�V��ܿBZ~����q\u0018��\u000f �a\u0019\u001fr��{O�\u0001PK\u0007\bz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000b\u0000\u0000\u0000_rels/.rels���j�0\f�_���8�`�Q��2�m��\u00014[ILb��ږ���.[K\n\u001b�($}�\u0007�v?�I�Q.���uӂ�h���\u001bx>=��@\u0015��p�H\u0006\"�~�}�\t�n����*\"\u0016\u0003�H�׺؁\u0002��\u0013���8\u0007�Z�^'�#��7m{��O\u0006�3��\u0019�G�\u0006u�ܓ\u0018�'��y|a\u001e�����D�\t��\u000el_\u0003EYȾ�\u0000���vql\u001f3�ML�eh\u0016���*�\u0004��\\3�Y0���oJ׏�\u0003\t:\u0014��^\b�\u001f�}\u0002PK\u0007\b��z��\u0000\u0000\u0000I\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0010\u0000\u0000\u0000docProps/app.xmlM��\n�0\u0010D��\u0010ro�z\u0010�4� �'{�\u000f\b��\u0006�MHV�盓z�\u0019��T��E�1e\u0017�����\u0002Ɇ�ѳ����:�No7jH!bb�Y�\u0007�V���\u0004�����T�)$o���0M��9ؗGb�7�\u0001pe�\u0011�*~�R�>��Y�EB��\u0014�\u0018nW\u0005������\u0000PK\u0007\b6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0011\u0000\u0000\u0000docProps/core.xmlm��J�0\u0010F_�依���\u0012�.�,\b�\u000b�(ޅdl��\u000fI��ֵۛ�\n�H�;s�L�=�!{G\u001fzkj�\nJ24Ҫ޴5y8��s��(�\u0012�5X\u0013cɶ����z�{���\u001eC�4&p�j���8@�\u001dj\u0011�D�\u0014�X�ELO߂\u0013�U�\b%�g�1\n%��I���HNJ%\u0017�{��,P\u0012p@�&\u0006`\u0005�\u001f6���߆9Y�c�\u0017j\u001c�b\\�\\�������<|ޛ��\u0012IS��\\z\u0014\u0011U�\u0004<~�����quyuؑ���:��t\u000e��5��湂_����n}s�\u0016�a������\\��57�PK\u0007\b\u0000}��\u0005\u0001\u0000\u0000�\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0014\u0000\u0000\u0000xl/sharedStrings.xml���N�0\u0018�w$���N\u001d�%�U�\u000ePX\u0010\f�\u00070�Ok)���D<>�\n\u0003�U0�����\u0006\u0017�O۰�B4ޕ\\N2���~kܮ䯛��9_U�\u0017E��վs��9g�3\u001f\u001d�\u001e�Y��P�b��)�K!b�'��ķ�?�>X��ϰ\u0013�\r��qO�l#T���j�xUDS\u0015�z0>8�,D�\nq���Sg)��ñ���J>�F\n=��9В��|��Ώ�j�n��@�ѽ\u000f:��B���p]�sء�Q��p�\u001fUg���t�i&E���/��i�������@���s�5#t\nP�CB�\f�\u0014j� �\u001a�� =bs���(\u0000�\u0006��\u001c�\u000b\u0010�\f�hq�V�h/����_\"Q��$2��H!#��\u00142R�H!#��\u00142R�H!#�������RU_PK\u0007\bD��/[\u0001\u0000\u0000�\u0004\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\r\u0000\u0000\u0000xl/styles.xml��Qk�0\u0010��\u0007�\u000e!�֎R�ڇ�c��`���\u001a��B���O��h��JY_������h�>J�\u000e�X\u000e���Y�\u0011S5P��\u0002l��\u0015^��\u000f�u�`��1��C�\u0002w��$�u�$�3�L�7\r\u0018I�OM�Xm\u0018�6��H�4]&�p��\\�e%�E5�+p��2o@��\u0005�B��ot \u0016f�e5\b0�+ʎ�\u0016x\u00154E$�U�D��\u0003�H.�(gA\u0018&\u001d�$W`���.��'�4�2\u000e���3{�O�s\u0004����Ʌ8��(��&�1�*��1���\u0015X�\u001a\u001b\u000fu7�)1_o��\u0017����w`�����\u001cOR�\u000b�8o0����@���9�>�����\b��1\u0006\u001e[3!6�k�l~��\r���NÍ���\u0014���0bb\u0012���Ⱦ�.�¢cs�_s�o�\u0011�Z�\u0015�A���\u001a.�\u000f��������?PK\u0007\b*9h�w\u0001\u0000\u0000�\u0003\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u000f\u0000\u0000\u0000xl/workbook.xml��=O�0\u0010�w$��u{k��\n�8\u001d@H�\u0018\nk�ڗƪ?\"����qR\u0005\u0018�N����f��\u001d�`\"\u001b��j)�a���p��{[<����k�1�\u000e1�X�\u0003I�s\u001ej�I��\u0015-〡l����%�#�!�2�#f���\u0010k�\rp3��?��uV�k�g�!�$\t�ʥ-�v h��'fT��Y<J�#\u0004�6����~�12����N\u001d$������<YP\u001e%���gWn��#�^����\u001a\tikV�&v[b5�f\u0005����PK\u0007\b�\u0011�X�\u0000\u0000\u0000j\u0001\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001a\u0000\u0000\u0000xl/_rels/workbook.xml.rels��Mk�0\f@���}q��\u0018�n/c����\u0000c+qh\"\u0019K�迟���@\u0007;�$��{\u000f��~Γy�\"#���i� \u0005�#\r\u000e^�O7�`D=E?1�\u0003b�n��8y�?$�YLE�8H���Z\t\tg/\rg����^�\f6�p�\u0003�U���r΀%�좃��\u001d��/\u0003�\u0003I�`|�Rˤ��:f����~\f���mF�\u000bv����\u001c�:���ׯ�������p9HB�Sy\u001dݵK~\u0004�\u0018����\u000bPK\u0007\b�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000PK\u0003\u0004\u0014\u0000\b\b\b\u0000-e�X\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0018\u0000\u0000\u0000xl/worksheets/sheet1.xml��O��F\u0010���\u001d,�c����\u0015�Z�e'���$��=Ѐ��F�g؏\u001f�Xn���ir����G���h����伩�ɫr�\n/p\u001dUn�]^\u001e\u00167����寿�/U��9*�:݀�Y�Ƕ=��f{TE�x�Y��_�U]dmwY\u001f��\\�l7\f*N>\u0004A�\u0017Y^���./T�wtj�_��ćg\t���\u000f�ruin^;}��_��[���6{�K�ԶU�u[��~�O�o\u0006;��N���S�guyV���v\u001f5�>k7h[���S��\f�N��\u0018~_�]{�^���P&��l_��*���?tu^T�n�V��*�X\tt%�I\u0001�֑c\u001d9�I� \n���R�X*Ԗ�'�d\u0016�\u000f�h�\u0015M� ���؊�R�TJ\u0006��t\u0016�\u000f�J�Z���zq\u001c���Z�X+վ��FQh?]�uy\r��)k�弮.Nݯ��Q��S�Һ\u0001��4�wߖ��뇎�\u0015U�{Ś*�^�D\u0015�^�*�{ņ*�{�\u0017���\u0015�T�L\n���i�`� �\u0019\u0002Ð\u0014M\u0010U��\u0004]\u0015�\"��4?�*\"��ɛ�cнY1\u0012ts���\u001dS��.�܅t\f��+F�n�:$�R�)cp\u0017M�\":\u0006��\u0015#A\u000bj\u001dY�c�\u0018�œ���I�;F�V�:�pǔ1�K&w\t\u001d����J\u0000u^'\u0016�N\u0006w��.���`$xW�\u0016�h\u0019����n�n�P\u0005�}��YlYZ�dN\u0004\u001a\u0007����h\u0000��Q�s�\\3��\u001bb��s��@�-\n�;�53Y��\u0010L��pa4��EPp0\u0016��!4:\u0004��8a\u0018\r$�\"�\u0007c�\u001e\u001fB�C0��c��\u0000NAa�\u0010��ɢ����N����/\b#L!�EM\u0012A\u0003\u001e\u0007\u000e#�8�\u0005e\t���a\"4M\u0004\u0013�d\u0012�F���\u0014(�E{�\b�\u0014�$=�\u001c��\u0018**\\3�E�\u0015��=�\u001c��\u0018-����h\u000f\u0017�p\u0001&�q�0\u001a��\u0002\u0014.�\"��dQ�\u0005��Ǚ�h$�\u000b���kf�xs a���\u000b��\u0018.`\u0003\u0017��Ѣ�\u000bм'�&*��-`s2a\n\u0019\u001dj�\u0000\u0013�d\u0012�Fb�\u0000e\u000bcў-��\u0002L���a4�\u001c>m��53Y�l\u0001&�q�0�\u0010�\u0005l\u000e*\\3�E\r\u0017`�d\u000eՄ\u0018.`sZᚙ,j�\u0000��$s�&�p\u0001\u001b�p�L\u00165\\�9���B5!�\u000b���)d|\u0014��\"i���a$!f��9�0��\u000e5[$\u0013��q\rՄ�-����h�\u00169�峤L\u00101)�ad@T_�=32y��z�o\u001eb�����Շ�l���m�b�\u0006^�Pt_U�����\nG�����ڷ��u��#��u[�Ǳ�����\f��\u0000PK\u0007\b��\t�W\u0004\u0000\u0000�\u0018\u0000\u0000PK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�Xz��q;\u0001\u0000\u0000\u001c\u0004\u0000\u0000\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000[Content_Types].xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X��z��\u0000\u0000\u0000I\u0002\u0000\u0000\u000b\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000|\u0001\u0000\u0000_rels/.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X6n�!�\u0000\u0000\u0000�\u0000\u0000\u0000\u0010\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0002\u0000\u0000docProps/app.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X\u0000}��\u0005\u0001\u0000\u0000�\u0001\u0000\u0000\u0011\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000i\u0003\u0000\u0000docProps/core.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�XD��/[\u0001\u0000\u0000�\u0004\u0000\u0000\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0004\u0000\u0000xl/sharedStrings.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X*9h�w\u0001\u0000\u0000�\u0003\u0000\u0000\r\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000J\u0006\u0000\u0000xl/styles.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X�\u0011�X�\u0000\u0000\u0000j\u0001\u0000\u0000\u000f\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000�\u0007\u0000\u0000xl/workbook.xmlPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X�\u0003;��\u0000\u0000\u00003\u0002\u0000\u0000\u001a\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u001d\t\u0000\u0000xl/_rels/workbook.xml.relsPK\u0001\u0002\u0014\u0000\u0014\u0000\b\b\b\u0000-e�X��\t�W\u0004\u0000\u0000�\u0018\u0000\u0000\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00009\n\u0000\u0000xl/worksheets/sheet1.xmlPK\u0005\u0006\u0000\u0000\u0000\u0000\t\u0000\t\u0000?\u0002\u0000\u0000�\u000e\u0000\u0000\u0000\u0000"
+				}
+			]
+		}
+	]
+}

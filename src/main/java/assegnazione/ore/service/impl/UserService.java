@@ -1,6 +1,7 @@
 package assegnazione.ore.service.impl;
 
 import assegnazione.ore.BaseService;
+import assegnazione.ore.Utility;
 import assegnazione.ore.entity.User;
 import assegnazione.ore.repository.UserRepository;
 import assegnazione.ore.service.Element;
@@ -29,5 +30,17 @@ public class UserService extends BaseService implements Element<User> {
             log.error("Error into: " + getCurrentClassName() + "method: "+ getCurrentMethodName());
             throw new RuntimeException("element is null");
        }
+    }
+
+    @Override
+    public ResponseEntity<?> getInformations(int id) throws Exception {
+        log.info("Enter into: "+getCurrentClassName()+" start method: "+ getCurrentMethodName());
+        if(Utility.isNotNullOrEmpty(id)){
+            log.info("Finish method: "+ getCurrentMethodName());
+            return ResponseEntity.ok().body(userRepository.findById(id));
+        }else {
+            log.error("Error into: " + getCurrentClassName() + "method: "+ getCurrentMethodName());
+            throw new RuntimeException("element is null");
+        }
     }
 }

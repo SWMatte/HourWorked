@@ -112,7 +112,7 @@ public class HourController extends BaseService {
     @GetMapping("exportExcel")
     public void exportToExcel(HttpServletResponse response,@RequestParam String month) throws IOException {
         response.setContentType("application/octet-stream");
-        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd");
         String currentDateTime = dateFormatter.format(new Date());
 
         String headerKey = "Content-Disposition";
