@@ -4,6 +4,7 @@ import assegnazione.ore.BaseService;
 import assegnazione.ore.entity.DayMonth;
 import assegnazione.ore.entity.dto.DayWorkedDTO;
 import assegnazione.ore.entity.dto.OperationDTO;
+import assegnazione.ore.entity.dto.UserDTO;
 import assegnazione.ore.service.Element;
 import assegnazione.ore.service.ExcelService;
 import assegnazione.ore.service.iHourWorked;
@@ -120,6 +121,7 @@ public class HourController extends BaseService {
         response.setHeader(headerKey, headerValue);
 
         ExcelService excelService1 = new ExcelService(excelService.getValues(month));
-        excelService1.export(response);
+        UserDTO userDTO = excelService.getUserInfo(month);
+        excelService1.export(response,userDTO);
      }
 }

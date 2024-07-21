@@ -3,6 +3,7 @@ package assegnazione.ore.repository;
 import assegnazione.ore.entity.HourWorked;
 import assegnazione.ore.entity.dto.OperationDTO;
 import assegnazione.ore.entity.dto.TableDTO;
+import assegnazione.ore.entity.dto.UserDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -43,7 +44,8 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
                                                                  hw.number,
                                                                  hw.hour,
                                                                  hw.place,
-                                                                 :month)
+                                                                 :month,
+                                                                 hw.year)
                 FROM HourWorked hw
             """)
     List<TableDTO> getTableValue(@Param("month") String month);
@@ -85,6 +87,16 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
              WHERE hw.month=:month
             """)
     Integer getTotalDayForMonth(String month);
+
+
+    @Query("""
+        SELECT NEW assegnazione.ore.entity.dto.UserDTO(u.name, u.lastName)
+        FROM HourWorked hw
+        INNER JOIN hw.user u
+        WHERE  hw.month = :month
+        GROUP BY u.name, u.lastName
+        """)
+    UserDTO getUserDTO(String month);
 
 
 }
