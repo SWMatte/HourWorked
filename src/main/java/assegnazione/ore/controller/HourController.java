@@ -84,7 +84,7 @@ public class HourController extends BaseService {
         try {
             workDayService.addElement(dayWorkedDTO);
             log.info("Finish method: " + getCurrentMethodName());
-            return ResponseEntity.ok().build();
+            return ResponseEntity.status(HttpStatus.OK).body(HttpStatus.OK.is2xxSuccessful());
         } catch (EntityNotFoundException e) {
             log.error("Error into: " + getCurrentClassName() + "method: " + getCurrentMethodName());
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();

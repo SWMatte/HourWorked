@@ -75,15 +75,16 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
     @Query("""
                    select count(*) as giorni_lavorati
              FROM HourWorked hw
-                      where hw.hour <> 0
+                      where hw.hour <> 0 and hw.month =:month
             """)
-    Double getWorkedDay();
+    Double getWorkedDay(String month);
 
     @Query("""
              select count(*) as giorni_totali_mese
              FROM HourWorked hw
+             WHERE hw.month=:month
             """)
-    Integer getTotalDayForMonth();
+    Integer getTotalDayForMonth(String month);
 
 
 }

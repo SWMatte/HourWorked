@@ -126,13 +126,17 @@ public void export(HttpServletResponse response) throws IOException {
 }
 
 public ExcelDTO getValues(String month) {
-
+    if(month.length()==1){
+        month = "0"+month;
+    }
     List<TableDTO> listTableDto = hourWorkedRepository.getTableValue(month);
     Double getTotalHoursForMonth = hourWorkedRepository.getTotalHoursForMonth(month);
-    Double getWorkedDay = hourWorkedRepository.getWorkedDay();
-    Integer getTotalDayForMonth = hourWorkedRepository.getTotalDayForMonth();
+    Double getWorkedDay = hourWorkedRepository.getWorkedDay(month);
+    Integer getTotalDayForMonth = hourWorkedRepository.getTotalDayForMonth(month);
     Double getIllnessDay = hourWorkedRepository.getIllnessDay();
     Double getTotalHourWorked = hourWorkedRepository.getTotalHourWorked(month);
+
+
 
     return ExcelDTO.builder()
             .listTableDTO(listTableDto)
