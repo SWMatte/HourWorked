@@ -36,9 +36,9 @@ public class HourWorked {
 
     private Double illness; // ore di malattia
 
+    private Double hoursOff; // oer di permesso
 
-
-    private Double dayOff; // oer di permesso
+    private Double extraWork; // ore di straordinario
 
     @ManyToOne()
     @JoinColumn(name = "id_company")

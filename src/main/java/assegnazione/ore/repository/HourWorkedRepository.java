@@ -25,9 +25,9 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
                  u.lastName,
                  SUM(CASE WHEN hw.hour <> 0 THEN 1 ELSE 0 END),
                  COUNT(*),
-                 SUM(hw.hour + hw.dayOff + hw.holiday),
+                 SUM(hw.hour + hw.hoursOff + hw.holiday),
                  SUM(hw.illness),
-                 SUM(hw.dayOff),
+                 SUM(hw.hoursOff),
                  SUM(hw.hour)
              )
              FROM HourWorked hw
@@ -45,7 +45,8 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
                                                                  hw.hour,
                                                                  hw.place,
                                                                  :month,
-                                                                 hw.year)
+                                                                 hw.year,
+                                                                 hw.extraWork)
                 FROM HourWorked hw
             """)
     List<TableDTO> getTableValue(@Param("month") String month);
@@ -53,7 +54,7 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
 
 
     @Query("""
-                select sum(hw.hour) as totale_ore_lavorate
+                select sum(hw.hour+ hw.extraWork) as totale_ore_lavorate
              FROM HourWorked hw
                 where hw.month = :month
             """)
@@ -68,7 +69,7 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
 
 
     @Query("""
-                   select sum(hw.hour + hw.dayOff + hw.illness ) as totale_ore_mensili
+                   select sum(hw.hour + hw.hoursOff + hw.illness ) as totale_ore_mensili
              FROM HourWorked hw
                    where month =:month
             """)
@@ -88,6 +89,13 @@ public interface HourWorkedRepository extends JpaRepository<HourWorked, Integer>
             """)
     Integer getTotalDayForMonth(String month);
 
+
+    @Query("""
+             select sum(hw.extraWork) as ore_straordinario
+             FROM HourWorked hw
+             WHERE hw.month=:month
+            """)
+    Double getTotalExtraWork(String month);
 
     @Query("""
         SELECT NEW assegnazione.ore.entity.dto.UserDTO(u.name, u.lastName)

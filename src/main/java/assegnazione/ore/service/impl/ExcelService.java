@@ -1,4 +1,4 @@
-package assegnazione.ore.service;
+package assegnazione.ore.service.impl;
 
 import assegnazione.ore.entity.Location;
 import assegnazione.ore.entity.dto.ExcelDTO;
@@ -67,12 +67,17 @@ public class ExcelService {
         createCell(headerRow, 1, "Numero:", headerStyle);
         createCell(headerRow, 2, "Ore:", headerStyle);
         createCell(headerRow, 3, "Luogo:", headerStyle);
-        createCell(headerRow, 4, "Totale ore lavorate:", headerStyle);
-        createCell(headerRow, 5, "Totale giorni lavorati:", headerStyle);
-        createCell(headerRow, 6, "Totale ore nel mese:", headerStyle);
-        createCell(headerRow, 7, "Totale giorni nel mese:", headerStyle);
+        createCell(headerRow, 4, "Staordinario:", headerStyle);
+        createCell(headerRow, 5, "Totale ore lavorate:", headerStyle);
+        createCell(headerRow, 6, "Totale giorni lavorati:", headerStyle);
+        createCell(headerRow, 7, "Totale ore nel mese:", headerStyle);
+        createCell(headerRow, 8, "Totale giorni nel mese:", headerStyle);
         if (excelDTO.getGetIllnessDay() != 0) {
-            createCell(headerRow, 8, "Giorni malattia:", headerStyle);
+            createCell(headerRow, 9, "Giorni malattia:", headerStyle);
+        }
+
+        if (excelDTO.getGetTotalExtraWork() != 0) {
+            createCell(headerRow, 10, "Ore di straordinario", headerStyle);
         }
     }
 
@@ -109,15 +114,21 @@ public class ExcelService {
             createCell(row, columnCount++, tableDTO.getNumber() + "/" + tableDTO.getMonth(), style);
             createCell(row, columnCount++, tableDTO.getHour(), style);
             createCell(row, columnCount++, tableDTO.getPlace().toString(), style);
+            createCell(row, columnCount++, tableDTO.getExtraWork(), style);
         }
 
         Row totalRow = sheet.createRow(rowCount);
-        createCell(totalRow, 4, excelDTO.getGetTotalHourWorked(), style);
-        createCell(totalRow, 5, excelDTO.getGetWorkedDay(), style);
-        createCell(totalRow, 6, excelDTO.getGetTotalHoursForMonth(), style);
-        createCell(totalRow, 7, excelDTO.getGetTotalDayForMonth(), style);
+        createCell(totalRow, 4, excelDTO.getGetTotalExtraWork(), style);
+        createCell(totalRow, 5, excelDTO.getGetTotalHourWorked(), style);
+        createCell(totalRow, 6, excelDTO.getGetWorkedDay(), style);
+        createCell(totalRow, 7, excelDTO.getGetTotalHoursForMonth(), style);
+        createCell(totalRow, 8, excelDTO.getGetTotalDayForMonth(), style);
         if (excelDTO.getGetIllnessDay() != 0) {
-            createCell(totalRow, 8, excelDTO.getGetIllnessDay(), style);
+            createCell(totalRow, 9, excelDTO.getGetIllnessDay(), style);
+        }
+
+        if (excelDTO.getGetTotalExtraWork() != 0) {
+            createCell(totalRow, 10, excelDTO.getGetTotalExtraWork(), style);
         }
     }
 
@@ -132,7 +143,6 @@ public class ExcelService {
     }
 
     public ExcelDTO getValues(String month) {
-        ;
         if (month.length() == 1) {
             month = "0" + month;
         }
@@ -142,6 +152,7 @@ public class ExcelService {
         Integer getTotalDayForMonth = hourWorkedRepository.getTotalDayForMonth(month);
         Double getIllnessDay = hourWorkedRepository.getIllnessDay();
         Double getTotalHourWorked = hourWorkedRepository.getTotalHourWorked(month);
+        Double getTotalExtraWork = hourWorkedRepository.getTotalExtraWork(month);
         return ExcelDTO.builder()
                 .listTableDTO(listTableDto)
                 .getIllnessDay(getIllnessDay)
@@ -149,6 +160,7 @@ public class ExcelService {
                 .getWorkedDay(getWorkedDay)
                 .getTotalDayForMonth(getTotalDayForMonth)
                 .getTotalHourWorked(getTotalHourWorked)
+                .getTotalExtraWork(getTotalExtraWork)
                 .build();
     }
 

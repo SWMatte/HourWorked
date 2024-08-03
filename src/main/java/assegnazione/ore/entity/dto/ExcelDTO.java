@@ -22,6 +22,7 @@ public class ExcelDTO {
     private Integer getTotalDayForMonth;
     private Double getIllnessDay;
     private Double getTotalHourWorked;
+    private Double getTotalExtraWork;
 }
 
 

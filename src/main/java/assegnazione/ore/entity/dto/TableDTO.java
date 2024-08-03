@@ -17,6 +17,7 @@ public class TableDTO {
     private Location place;
     private String month;
     private String year;
+    private double extraWork;
 
 
 

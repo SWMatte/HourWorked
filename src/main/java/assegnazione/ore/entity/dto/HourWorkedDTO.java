@@ -29,7 +29,9 @@ public class HourWorkedDTO {
 
     private Double holiday;
 
-    private double dayOff;
+    private double hoursOff;
+
+    private double extraWork;
 
 
 

@@ -21,8 +21,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @AllArgsConstructor
 @Data
@@ -60,7 +58,8 @@ public class WorkDayService extends BaseService implements Element<DayWorkedDTO>
                         .note(hoursWorkedDTO.getNote())
                         .place(Location.valueOf(hoursWorkedDTO.getPlace()))
                         .illness(hoursWorkedDTO.getIllness())
-                        .dayOff(hoursWorkedDTO.getDayOff())
+                        .hoursOff(hoursWorkedDTO.getHoursOff())
+                        .extraWork(hoursWorkedDTO.getExtraWork())
                         .user(user)
                         .company(company)
                         .build();
